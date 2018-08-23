@@ -17,7 +17,7 @@ RingBuffer::RingBuffer(){
 	full_bit.store(false);
 }
 
-//read data by word_max_len from resource and
+//Read data by word_max_len from resource and
 //write by chunk_size buckets into ring buffer, while buffer is not full
 bool RingBuffer::write_chunk(istream* res){
 	auto cur_write_ptr = write_ptr.load(memory_order_acquire);
@@ -56,7 +56,7 @@ bool RingBuffer::write_chunk(FILE* res){
 }
 
 
-//read data by "chunk_size" buckets while buffer is not empty
+//Read data by "chunk_size" buckets while buffer is not empty
 //after each read chunk cycle, shift read pointer
 int RingBuffer::read(char* val){
 	auto cur_read_ptr = read_ptr.load(memory_order_acquire);
