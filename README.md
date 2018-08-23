@@ -3,6 +3,7 @@ Fast multi-thread single file handler. Dispatch chunks of the file to worker thr
 
 All configuration options are determined with descriptions in /headers/ioperf.h.
 Writer thread read the data from file /headers/ioperf.h -> input_data_filename.
+Words in file should be splitted by '\n' character.
 
 Data is read by writer thread with variable chunk size into appropriate ring buffer. Count of ring buffers is equal to count of reader threads.
 
