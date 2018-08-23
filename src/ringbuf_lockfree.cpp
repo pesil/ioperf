@@ -6,6 +6,7 @@
  *  Created on: Aug 8, 2018
  *      Author: petersil
  */
+
 #include <ringbuf_lockfree.h>
 
 RingBuffer::RingBuffer(){
