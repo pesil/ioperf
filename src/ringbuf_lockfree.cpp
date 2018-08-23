@@ -9,6 +9,7 @@
 
 #include <ringbuf_lockfree.h>
 
+
 RingBuffer::RingBuffer(){
 	write_ptr.store(0);
 	read_ptr.store(0);
